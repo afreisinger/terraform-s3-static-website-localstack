@@ -11,8 +11,14 @@ Last modified July 7, 2024
 * * *
 ## TL;DR
 
-### Steps to Clone the Repository and Run Terraform
+### Steps to Install LocalStack, Clone the Repository, and Run Terraform
 
+
+1. **Install LocalStack**
+
+    Follow the instructions on the [LocalStack installation guide](https://docs.localstack.cloud/getting-started/installation/).
+
+2. **Clone the repository**
 
     ```sh
     git clone https://github.com/afreisinger/s3-static-website-terraform-localstack
@@ -21,9 +27,9 @@ Last modified July 7, 2024
     terraform plan
     terraform apply -auto-approve
     ```
-With these steps, you will clone the repository, enter the project directory, and execute the necessary Terraform commands to initialize, plan, and apply the configuration.
 
 
+With these steps, you will install LocalStack, clone the repository, enter the project directory, and execute the necessary Terraform commands to initialize, plan, and apply the configuration without requiring manual confirmation.
 
 * * *
 
@@ -193,6 +199,10 @@ We take a user input for the bucket name and tags. Next, we will define the outp
     
     output "website_endpoint" {
       value = aws_s3_bucket_website_configuration.s3_bucket.website_endpoint
+    }
+
+    output "url_localstack" {
+      value = "http://${var.bucket_name}.s3-website.localhost.localstack.cloud:4566"
     }
     
 
