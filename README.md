@@ -14,9 +14,9 @@ Last modified July 7, 2024
 ### Steps to Install LocalStack, Clone the Repository, and Run Terraform
 
 
-1. **Install LocalStack**
+1. **Install LocalStack and awslocal**
 
-    Follow the instructions on the [LocalStack installation guide](https://docs.localstack.cloud/getting-started/installation/).
+    Follow the instructions on the [LocalStack installation guide](https://docs.localstack.cloud/getting-started/installation/) and [LocalStack AWS CLI instalation guide](https://github.com/localstack/awscli-local?tab=readme-ov-file#installation)
 
 2. **Clone the repository**
 
