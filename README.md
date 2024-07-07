@@ -28,6 +28,19 @@ Last modified July 7, 2024
     terraform apply -auto-approve
     ```
 
+3. **Resources**
+  
+    ```sh
+    awslocal s3 ls
+    awslocal s3 ls testwebsite
+    ```
+
+4. **Access**
+    
+    You can now access the website using the bucket name in the following format:
+    ```sh
+    http://testwebsite.s3-website.localhost.localstack.cloud:4566
+    ```
 
 With these steps, you will install LocalStack, clone the repository, enter the project directory, and execute the necessary Terraform commands to initialize, plan, and apply the configuration without requiring manual confirmation.
 
